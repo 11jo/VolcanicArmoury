@@ -58,8 +58,8 @@ SAY UNIDENTIFIED_DESC @2
 SAY DESC @2
 
 COPY_EXISTING ~roger.sto~ ~override/roger.sto~
-ADD_STORE_ITEM "MGVHELM2" #10 #0 #0 ~IDENTIFIED~ #1
-COPY ~VolcanicArmoury/Items/MGVHELM2.itm~ ~override/MGVHELM2.itm~
+ADD_STORE_ITEM "MGIOUN1" #10 #0 #0 ~IDENTIFIED~ #1
+COPY ~VolcanicArmoury/Items/MGIOUN1.itm~ ~override/MGIOUN1.itm~
 SAY NAME1 @3
 SAY NAME2 @3
 SAY UNIDENTIFIED_DESC @4

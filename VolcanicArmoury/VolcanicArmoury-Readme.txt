@@ -44,3 +44,13 @@ Version 1.4:
 
 Version 1.5:
 -Updated to WeiDU version 230.
+
+Version 1.6:
+-Updated to WeiDU version 249.
+-French translation by Le Marquis
+-Update and EE conversion by JohnBob and Le Marquis
+-Implement missing item Ioun Stone of Alertness
+-Autotra
+-InfinityAutoPackager
+-Metadata and Labels
+-Correction for MGXBOW1.ITM
