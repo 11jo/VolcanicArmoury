@@ -1,12 +1,16 @@
-@0    = ~Volcanic Armoury [Version 1.5]~
+@0    = ~Volcanic Armoury~
 @1    = ~Helmet of Wisdom~
 @2    = ~Helmet of Wisdom, Common Sense
 This helm was crafted by holy blacksmiths to aid apprentice clerics and squire holy knights in their spiritual and religious training.
 
 STATISTICS:
 
-Bonus +1 to Wisdom.
+Equipped abilities: 
+- Protection against critical hits
+- Wisdom: +1
+
 Weight: 4
+
 Usable By:
  Clerics (single, dual and multi-class)
  Paladins~
@@ -27,10 +31,16 @@ These suits of leather armour are created of soft comfortable leather, with fres
 
 STATISTICS:
 
-Increase casting speed factor: 1
-Armor Class: 5
+Equipped abilities: 
+- Increase casting speed factor: 1
+
+Armor Class: 5 (3 vs. slashing attacks, 4 vs. piercing and missile attacks)
+
+Requires: 
+- 6 Strength
+
 Weight: 5
-Requires: 6 Strength
+
 Usable By:
  Rangers
  Druids~
@@ -40,10 +50,16 @@ This suit of armour was once in the possession of a restless warrior spirit. Par
 
 STATISTICS:
 
-Magic damage resistance: 15%
-Armor Class: 0
+Equipped abilities: 
+- Magic Damage Resistance: +15%
+
+Armor Class: 0 (-4 vs. slashing attacks, -3 vs. piercing and missile attacks)
+
+Requires: 
+- 16 Strength
+
 Weight: 45
-Requires: 16 Strength
+
 Not Usable By:
  Bard
  Druid
@@ -56,9 +72,13 @@ Casual robes are light and offer protection only slightly surpassing that of clo
 
 STATISTICS:
 
-Bonus +1 to Dexterity
+Equipped abilities: 
+- Dexterity: +1
+
 Armor Class: 9
+
 Weight: 4
+
 Usable By:
  Mage
  Sorcerer
@@ -70,9 +90,14 @@ This shield radiates an aura of air elemental magic, making it light as a feathe
 
 STATISTICS:
 
-Armor Class Bonus: 3
+Equipped abilities: 
+- Armor Class: +3
+
+Requires: 
+- 8 Strength
+
 Weight: 1
-Requires: 8 Strength
+
 Not Usable By:
  Bard
  Druid
@@ -85,10 +110,15 @@ This is a relatively simple shield that holds powerful enchantments that make th
 
 STATISTICS:
 
-Bonus +1 to Constitution
-Armor Class Bonus: 3
+Equipped abilities: 
+- Armor Class: +3
+- Constitution: +1
+
+Requires: 
+- 4 Strength
+
 Weight: 3
-Requires: 4 Strength
+
 Not Usable By:
  Bard
  Druid
@@ -101,14 +131,20 @@ Not Usable By:
 
 STATISTICS:
 
-Damage:  1D6+3
-Damage type:  crushing
-Special: 30% chance of slaying if the target is a beholder
-Weight: 6
+Equipped abilities: 
+- 31% chance to kill instantly the beholders
+
+THAC0: +3
+Damage: 1d6 +4 (Crushing)
 Speed Factor: 4
-Proficiency Type: Mace
-Type:  1-handed
-Requires: 12 Strength
+Proficiency Type: Masse d'armes
+Type: One-Handed
+
+Requires: 
+- 12 Strength
+
+Weight: 6
+
 Not Usable By:
  Druid
  Mage
@@ -117,11 +153,15 @@ Not Usable By:
 @17   = ~Brainguard Helmet~
 @18   = ~Brainguard Helmet
 Typically used by adventurers travelling into the Underdark, this helmet protects against changes in intelligence caused by mind flayers and other effects.
- 
-Armor Class Bonus:  None
-Special:  Protects Against Critical Hits
-          Immunity to intelligence stat change
+
+STATISTICS:
+
+Equipped abilities: 
+- Protection against critical hits
+- Immunity to to modification of intelligence
+
 Weight: 1
+
 Not Usable By:
  Mage
  Bard
@@ -134,12 +174,20 @@ A variation of the crossbow, the crossbowgun is designed for rapid fire. This pa
 
 STATISTICS:
 
-Damage:  +2 (missile)
+Equipped abilities: 
+- Attacks per round: Set to 2
+
+THAC0: +3
+Damage: +5 (Missile)
+Speed Factor: 2
+Proficiency Type: Arbalète
+Type: Two-Handed
+
+Requires: 
+- 17 Strength
+
 Weight: 23
-Speed Factor: 10
-Proficiency Type: Crossbow
-Type:  2-handed
-Requires: 17 Strength
+
 Not Usable By:
  Druid
  Cleric

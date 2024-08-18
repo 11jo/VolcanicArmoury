@@ -1,14 +1,13 @@
-@0    = ~Volcanic Armoury [Version 1.5]~
-@1    = ~Helmet of Wisdom~
 @2    = ~Helmet of Wisdom, Common Sense
 This helm was crafted by holy blacksmiths to aid apprentice clerics and squire holy knights in their spiritual and religious training.
 
 STATISTICS:
 
-Bonus +1 to Wisdom.
-Weight: 4~
+Equipped abilities: 
+- Protection against critical hits
+- Wisdom: +1
 
-@3    = ~Ioun Stone of Alertness~
+Weight: 4~
 @4    = ~Ioun Stone of Alertness, Burglar's Third Eye
 Smuggled into Amn by the Shadow Thieves, these special ioun stones are specifically crafted for burglars and robbers who prefer to work alone. Wearing this stone above their heads, they find their senses heightened, able to keep an eye out for illusions and traps during a job.
 
@@ -18,92 +17,120 @@ Detect Illusions bonus: 15%
 Find Traps bonus: 20%
 Weight: 2~
 
-@5    = ~Cured Leaf Hauberk +3~
 @6    = ~Studded Leather +3, Cured Leaf Hauberk
 These suits of leather armour are created of soft comfortable leather, with fresh cured leaves attached to them by means of magical wax. This combination makes for a tight fit, yet it provides a decent protection against attacks. Only woodsmen and druids would wear these kind of items.
 
 STATISTICS:
 
-Increase casting speed factor: 1
-Armor Class: 5
-Weight: 5
-Requires: 6 Strength~
+Equipped abilities: 
+- Increase casting speed factor: 1
 
-@7    = ~Restless Spirit +1~
+Armor Class: 5 (3 vs. slashing attacks, 4 vs. piercing and missile attacks)
+
+Requires: 
+- 6 Strength
+
+Weight: 5~
+
 @8    = ~Full Plate +1, Restless Spirit
 This suit of armour was once in the possession of a restless warrior spirit. Part of the etherealness remains, as it seems to protect against various forms of magic damage.
 
 STATISTICS:
 
-Magic damage resistance: 15%
-Armor Class: 0
-Weight: 45
-Requires: 16 Strength~
+Equipped abilities: 
+- Magic Damage Resistance: +15%
 
-@9    = ~Casual Robes~
+Armor Class: 0 (-4 vs. slashing attacks, -3 vs. piercing and missile attacks)
+
+Requires: 
+- 16 Strength
+
+Weight: 45~
+
 @10   = ~Casual Robes
 Casual robes are light and offer protection only slightly surpassing that of cloth, but offer greater freedom than any other armour.
 
 STATISTICS:
 
-Bonus +1 to Dexterity
+Equipped abilities: 
+- Dexterity: +1
+
 Armor Class: 9
+
 Weight: 4~
 
-@11   = ~Featherweight Shield~
 @12   = ~Medium Shield +2, Featherweight
 This shield radiates an aura of air elemental magic, making it light as a feather and thus easy to use, even for ones who normally lack the physical strength to use medium shields.
 
 STATISTICS:
 
-Armor Class Bonus: 3
-Weight: 1
-Requires: 8 Strength~
+Equipped abilities: 
+- Armor Class: +3
 
-@13   = ~Shield of Fortitude~
+Requires: 
+- 8 Strength
+
+Weight: 1~
+
 @14   = ~Small Shield +2, Shield of Fortitude
 This is a relatively simple shield that holds powerful enchantments that make the wearer more hardy and less susceptible to poison and disease.
 
 STATISTICS:
 
-Bonus +1 to Constitution
-Armor Class Bonus: 3
-Weight: 3
-Requires: 4 Strength~
+Equipped abilities: 
+- Armor Class: +3
+- Constitution: +1
 
-@15   = ~Hivemurderer +3~
+Requires: 
+- 4 Strength
+
+Weight: 3~
+
 @16   = ~Mace +3, Hivemurderer
 "Hivemurderer" got its name from the man who used it to slay a particularly nasty hive of Beholder-kin, after having forged this weapon with his own bare hands. A champion of the surrounding towns, Hivemurderer wasn't able to enjoy it for very long; he was shot in the back with a poisoned arrow. Likely the mace was stolen after.
 
 STATISTICS:
 
-Damage:  1D6+3
-Damage type:  crushing
-Special: 30% chance of slaying if the target is a beholder
-Weight: 6
-Speed Factor: 4
-Proficiency Type: Mace
-Type:  1-handed
-Requires: 12 Strength~
+Equipped abilities: 
+- 31% chance to kill instantly the beholders
 
-@17   = ~Brainguard Helmet~
+THAC0: +3
+Damage: 1d6 +4 (Crushing)
+Speed Factor: 4
+Proficiency Type: Masse d'armes
+Type: One-Handed
+
+Requires: 
+- 12 Strength
+
+Weight: 6~
+
 @18   = ~Brainguard Helmet
 Typically used by adventurers travelling into the Underdark, this helmet protects against changes in intelligence caused by mind flayers and other effects.
- 
-Armor Class Bonus:  None
-Special:  Protects Against Critical Hits
-          Immunity to intelligence stat change
+
+STATISTICS:
+
+Equipped abilities: 
+- Protection against critical hits
+- Immunity to to modification of intelligence
+
 Weight: 1~
 
-@19   = ~Grand Cross Conclusion +3~
 @20   = ~Crossbowgun +3, Grand Cross Conclusion
 A variation of the crossbow, the crossbowgun is designed for rapid fire. This particular model is quite infamous and hard to find, as only a few were ever made.
 
 STATISTICS:
 
-Damage:  +2 (missile)
-Weight: 23
-Speed Factor: 10
-Proficiency Type: Crossbow
-Type:  2-handed
-Requires: 17 Strength~
+Equipped abilities: 
+- Attacks per round: Set to 2
+
+THAC0: +3
+Damage: +5 (Missile)
+Speed Factor: 2
+Proficiency Type: Arbalète
+Type: Two-Handed
+
+Requires: 
+- 17 Strength
+
+Weight: 23~

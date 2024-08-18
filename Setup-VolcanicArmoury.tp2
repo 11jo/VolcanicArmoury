@@ -1,23 +1,36 @@
 BACKUP ~VolcanicArmoury/backup~
 AUTHOR ~st.aionmodding@yahoo.com~
 
+VERSION ~1.6~
 
-    // Convert strings to UTF-8 for BGEE/BG2EE
-    // No exception, everything needs to be converted
-    // setup.tra contains in game texts as well as installation texts and need to be converted
-    ACTION_DEFINE_ARRAY charsetsNoConvertArray BEGIN END
-    // any tra files used in LANGUAGE need to be reloaded after UTF-8 conversion
-    ACTION_DEFINE_ARRAY charsetsReloadArray BEGIN setup-VolcanicArmoury END
+ALWAYS
+
+ACTION_IF GAME_IS ~bg2ee eet~ BEGIN
+    // Copiy tra files into the autotra-folder (to leave the originals untouched)
+    DEFINE_ACTION_FUNCTION autotra_workaround BEGIN
+      COPY ~VolcanicArmoury/lang/English~  ~VolcanicArmoury/lang/autotra/%LANGUAGE%~
+      COPY ~VolcanicArmoury/lang/%LANGUAGE%~  ~VolcanicArmoury/lang/autotra/%LANGUAGE%~
+    END
+
+    LAF autotra_workaround END
+
+ACTION_DEFINE_ARRAY fl#noconvert BEGIN setup-ee END
+
+ACTION_DEFINE_ARRAY fl#reload BEGIN setup END
 
     LAF HANDLE_CHARSETS
       INT_VAR
         infer_charsets = 1
       STR_VAR
-        tra_path = EVAL ~VolcanicArmoury/lang~
-	iconv_path = "VolcanicArmoury/lang/iconv"
-        reload_array = charsetsReloadArray
-        noconvert_array = charsetsNoConvertArray
-    END
+        tra_path = EVAL ~VolcanicArmoury/lang/autotra~
+        // noconvert_array = fl#noconvert
+        reload_array = fl#reload
+	END
+
+LOAD_TRA ~VolcanicArmoury/lang/%LANGUAGE%/setup-ee.tra~
+
+	END
+END
 
 LANGUAGE
 	~English~
@@ -26,14 +39,13 @@ LANGUAGE
 
 LANGUAGE 
 	~French (by Le Marquis)~
-        ~french~
-	~VolcanicArmoury/lang/english/setup.tra~
-        ~VolcanicArmoury/lang/french/setup.tra~
-
-LOAD_TRA ~VolcanicArmoury/lang/%LANGUAGE%/setup-ee.tra~
+	~french~
+	~VolcanicArmoury/lang/french/setup.tra~
 
 
 BEGIN @0
+DESIGNATED 0
+LABEL ~Aion-Volcanic_Armoury~
 
 COPY_EXISTING ~doghma.sto~ ~override/doghma.sto~
 ADD_STORE_ITEM "MGVHELM1" #10 #0 #0 ~IDENTIFIED~ #2
