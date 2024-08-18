@@ -1,0 +1,142 @@
+@0    = ~Volcanic Armoury [Version 1.5]~
+@1    = ~Casque de sagesse~
+@2    = ~Casque de sagesse, sens commun
+Ce casque fut fabriqué par des forgerons sacrés pour aider les apprentis clercs et les chevaliers sacrés dans leur formation spirituelle et religieuse.
+
+PARAMETRES :
+
+Capacités d'équipement : 
+- Protection contre les coups critiques
+- Sagesse : +1
+
+Poids : 4~
+
+@3    = ~Pierre ionique de vigilance~
+@4    = ~Pierre ionique de vigilance, troisième oeil du cambrioleur
+Introduites en contrebande en Amn par les Voleurs de l'Ombre, ces pierres ioniques particulières sont spécialement conçues pour les cambrioleurs et les voleurs qui préfèrent travailler seuls. En portant cette pierre au-dessus de leur tête, ils voient leurs sens s'aiguiser, ce qui leur permet d'être à l'affût des illusions et des pièges pendant leurs activités.
+
+PARAMETRES :
+
+Capacités d'équipement :
+- Détection des illusions : + 15 %
+- Détection des pièges : + 20 %
+
+Poids : 2~
+
+@5    = ~Haubert de feuilles séchées +2~
+@6    = ~Besantine +2, haubert de feuilles séchées
+Ces besantines sont faites de cuir souple et confortable sur lequel sont fixées, à l'aide d'une cire magique, des feuilles fraîchement séchées. Cette combinaison assure un bon maintien, tout en offrant une protection décente contre les attaques. Seuls les hommes des bois et les druides portent ce genre d'équipement.
+
+PARAMETRES:
+Capacités d'équipement : 
+- Temps d'incantation : -1
+
+Classe d'armure : 5 (3 contre les armes tranchantes, 4 contre les armes perforantes et les projectiles)
+
+Nécessite : 
+- 6 en Force~
+
+@7    = ~Esprit Tourmenté +1~
+@8    = ~Harnois +1, Esprit Tourmenté
+Cette armure était autrefois en possession d'un esprit guerrier tourmenté. Elle a conservé une partie de son caractère éthéré et semble protéger contre diverses formes de dégâts magiques.
+
+PARAMETRES :
+
+Capacités d'équipement : 
+- Résistance aux dégâts magiques : +15 %
+- Empêche l'utilisation du camouflage dans l'ombre
+
+Classe d'armure : 0 (-4 contre les armes tranchantes, -3 contre les armes perforantes et les projectiles)
+
+Nécessite : 
+- 16 en Force
+
+Poids : 45~
+
+@9    = ~Robes décontractées~
+@10   = ~Robes décontractées
+Les robes décontractées sont légères et offrent une protection à peine supérieure à celle d'un tissu classique, mais procurent une plus grande liberté de mouvement que n'importe quelle autre armure.
+
+PARAMÈTRES : 
+
+Capacités d'équipement : 
+- Dextérité : +1
+
+Classe d'armure : 9
+
+Poids : 4~
+
+@11   = ~Ecu poids plume~
+@12   = ~Ecu +2, poids plume
+Cet écu irradie une aura de magie élémentaire de l'air, ce qui le rend aussi léger qu'une plume et donc facile à utiliser, même pour ceux qui n'ont normalement pas la force physique nécessaire pour utiliser un écu.
+
+PARAMETRES:
+
+Capacités d'équipement : 
+- Classe d'armure : +3
+
+Nécessite : 
+- 8 en Force
+
+Poids : 1~
+
+@13   = ~Bouclier d'endurance~
+@14   = ~Rondache +2, Bouclier d'endurance
+Il s'agit d'un bouclier relativement simple qui contient cependant de puissants enchantements, rendant son porteur plus résistant et moins sensible au poison et aux maladies.
+
+PARAMETRES:
+
+Capacités d'équipement : 
+- Classe d'armure : +3
+- Constitution : +1
+
+Nécessite : 
+- 4 en Force
+
+Poids : 3~
+
+@15   = ~Massacreuse de ruche +3~
+@16   = ~Masse +3, Massacreuse de ruche
+"Massacreuse de ruche" doit son nom à l'homme qui la forgea de ses propres mains et l'utilisa pour détruire une ruche de tyrannoeils et créatures apparentées, particulièrement maléfiques. Devenu un héros dans les villes de la région, notre homme ne put jouir longtemps de son statut car il fut bientôt tué d'une flèche empoisonnée dans le dos. Il est probable que la masse ait été volée après sa mort.
+
+PARAMETRES:
+
+Capacités d'équipement : 
+- 31 % de chances de tuer instantanément les tyrannoeils
+TAC0 : +3
+Dégâts : 1d6 +4 (Contondant)
+Facteur de vitesse : 4
+Type de compétence : Masse d'armes
+Type : Arme à 1 main
+
+Nécessite : 
+- 12 en Force
+
+Poids : 6~
+
+@17   = ~Casque de protection du cerveau~
+@18   = ~Casque de protection du cerveau
+Généralement utilisé par les aventuriers qui se rendent dans l'Ombre-Terre, ce casque protège contre les modifications d'intelligence, qu'elles soient causées par les flagelleurs mentaux ou pour d'autres raisons.
+ 
+Bonus à la classe d'armure : aucun
+Capacités d'équipement : 
+- Protection contre les coups critiques
+- Immunité à la modification de l'intelligence
+Poids : 1~
+
+@19   = ~Grand Croix Conclusion +3~
+@20   = ~Arbalète fulgurante +3, Grand Croix Conclusion
+Variante de l'arbalète, l'arbalète fulgurante est conçue pour le tir rapide. Ce modèle particulier est assez célèbre et difficile à trouver, car il n'a été fabriqué qu'à quelques exemplaires.
+
+PARAMETRES:
+
+TAC0 : +3
+Dégâts : +5 (Projectile)
+Facteur de vitesse : 2
+Type de compétence : Arbalète
+Type : Arme à 2 mains
+
+Nécessite : 
+- 17 en Force
+
+Poids : 23~

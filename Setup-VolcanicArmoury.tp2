@@ -1,341 +1,116 @@
-BACKUP ~VolcanicArmoury\backup~
+BACKUP ~VolcanicArmoury/backup~
 AUTHOR ~st.aionmodding@yahoo.com~
-BEGIN ~Volcanic Armoury [Version 1.4]~
+
+
+    // Convert strings to UTF-8 for BGEE/BG2EE
+    // No exception, everything needs to be converted
+    // setup.tra contains in game texts as well as installation texts and need to be converted
+    ACTION_DEFINE_ARRAY charsetsNoConvertArray BEGIN END
+    // any tra files used in LANGUAGE need to be reloaded after UTF-8 conversion
+    ACTION_DEFINE_ARRAY charsetsReloadArray BEGIN setup-VolcanicArmoury END
+
+    LAF HANDLE_CHARSETS
+      INT_VAR
+        infer_charsets = 1
+      STR_VAR
+        tra_path = EVAL ~VolcanicArmoury/lang~
+	iconv_path = "VolcanicArmoury/lang/iconv"
+        reload_array = charsetsReloadArray
+        noconvert_array = charsetsNoConvertArray
+    END
+
+LANGUAGE
+	~English~
+	~english~
+	~VolcanicArmoury/lang/english/setup.tra~
+
+LANGUAGE 
+	~French (by Le Marquis)~
+        ~french~
+	~VolcanicArmoury/lang/english/setup.tra~
+        ~VolcanicArmoury/lang/french/setup.tra~
+
+LOAD_TRA ~VolcanicArmoury/lang/%LANGUAGE%/setup-ee.tra~
+
+
+BEGIN @0
 
 COPY_EXISTING ~doghma.sto~ ~override/doghma.sto~
 ADD_STORE_ITEM "MGVHELM1" #10 #0 #0 ~IDENTIFIED~ #2
 COPY ~VolcanicArmoury/Items/MGVHELM1.itm~ ~override/MGVHELM1.itm~
-SAY NAME1 ~Helmet of Wisdom~
-SAY NAME2 ~Helmet of Wisdom~
-SAY UNIDENTIFIED_DESC ~Helmet of Wisdom, Common Sense
-This helm was crafted by holy blacksmiths to aid apprentice clerics and squire holy knights in their spiritual and religious training.
-
-STATISTICS:
-
-Bonus +1 to Wisdom.
-Weight: 4
-Usable By:
- Clerics (single, dual and multi-class)
- Paladins~
-SAY DESC ~Helmet of Wisdom, Common Sense
-This helm was crafted by holy blacksmiths to aid apprentice clerics and squire holy knights in their spiritual and religious training.
-
-STATISTICS:
-
-Bonus +1 to Wisdom.
-Weight: 4
-Usable By:
- Clerics (single, dual and multi-class)
- Paladins~
+SAY NAME1 @1
+SAY NAME2 @1
+SAY UNIDENTIFIED_DESC @2
+SAY DESC @2
 
 COPY_EXISTING ~roger.sto~ ~override/roger.sto~
 ADD_STORE_ITEM "MGVHELM2" #10 #0 #0 ~IDENTIFIED~ #1
 COPY ~VolcanicArmoury/Items/MGVHELM2.itm~ ~override/MGVHELM2.itm~
-SAY NAME1 ~Ioun Stone of Alertness~
-SAY NAME2 ~Ioun Stone of Alertness~
-SAY UNIDENTIFIED_DESC ~Ioun Stone of Alertness, Burglar's Third Eye
-Smuggled into Amn by the Shadow Thieves, these special ioun stones are specifically crafted for burglars and robbers who prefer to work alone. Wearing this stone above their heads, they find their senses heightened, able to keep an eye out for illusions and traps during a job.
-
-STATISTICS:
-
-Detect Illusions bonus: 15%
-Find Traps bonus: 20%
-Weight: 2
-Usable By:
- Thieves (single, dual and multi-class)~
-SAY DESC ~Ioun Stone of Alertness, Burglar's Third Eye
-Smuggled into Amn by the Shadow Thieves, these special ioun stones are specifically crafted for burglars and robbers who prefer to work alone. Wearing this stone above their heads, they find their senses heightened, able to keep an eye out for illusions and traps during a job.
-
-STATISTICS:
-
-Detect Illusions bonus: 15%
-Find Traps bonus: 20%
-Weight: 2
-Usable By:
- Thieves (single, dual and multi-class)~
+SAY NAME1 @3
+SAY NAME2 @3
+SAY UNIDENTIFIED_DESC @4
+SAY DESC @4
 
 COPY_EXISTING ~bernard2.sto~ ~override/bernard2.sto~
 ADD_STORE_ITEM "MGVLEAT1" #10 #0 #0 ~IDENTIFIED~ #2
 COPY ~VolcanicArmoury/Items/MGVLEAT1.itm~ ~override/MGVLEAT1.itm~
-SAY NAME1 ~Cured Leaf Hauberk +3~
-SAY NAME2 ~Cured Leaf Hauberk +3~
-SAY UNIDENTIFIED_DESC ~Studded Leather +3, Cured Leaf Hauberk
-These suits of leather armour are created of soft comfortable leather, with fresh cured leaves attached to them by means of magical wax. This combination makes for a tight fit, yet it provides a decent protection against attacks. Only woodsmen and druids would wear these kind of items.
-
-STATISTICS:
-
-Increase casting speed factor: 1
-Armor Class: 5
-Weight: 5
-Requires: 6 Strength
-Usable By:
- Rangers
- Druids~
-SAY DESC ~Studded Leather +3, Cured Leaf Hauberk
-These suits of leather armour are created of soft comfortable leather, with fresh cured leaves attached to them by means of magical wax. This combination makes for a tight fit, yet it provides a decent protection against attacks. Only woodsmen and druids would wear these kind of items.
-
-STATISTICS:
-
-Increase casting speed factor: 1
-Armor Class: 5
-Weight: 5
-Requires: 6 Strength
-Usable By:
- Rangers
- Druids~
+SAY NAME1 @5
+SAY NAME2 @5
+SAY UNIDENTIFIED_DESC @6
+SAY DESC @6
  
 COPY_EXISTING ~ribald.sto~ ~override/ribald.sto~
 ADD_STORE_ITEM "MGVPLAT1" #10 #0 #0 ~IDENTIFIED~ #1
 COPY ~VolcanicArmoury/Items/MGVPLAT1.itm~ ~override/MGVPLAT1.itm~
-SAY NAME1 ~Restless Spirit +1~
-SAY NAME2 ~Restless Spirit +1~
-SAY UNIDENTIFIED_DESC ~Full Plate +1, Restless Spirit
-This suit of armour was once in the possession of a restless warrior spirit. Part of the etherealness remains, as it seems to protect against various forms of magic damage.
-
-STATISTICS:
-
-Magic damage resistance: 15%
-Armor Class: 0
-Weight: 45
-Requires: 16 Strength
-Not Usable By:
- Bard
- Druid
- Mage
- Thief
- Monk~
-SAY DESC ~Full Plate +1, Restless Spirit
-This suit of armour was once in the possession of a restless warrior spirit. Part of the etherealness remains, as it seems to protect against various forms of magic damage.
-
-STATISTICS:
-
-Magic damage resistance: 15%
-Armor Class: 0
-Weight: 45
-Requires: 16 Strength
-Not Usable By:
- Bard
- Druid
- Mage
- Thief
- Monk~
+SAY NAME1 @7
+SAY NAME2 @7
+SAY UNIDENTIFIED_DESC @8
+SAY DESC @8
 
 COPY_EXISTING ~murcrag.sto~ ~override/murcrag.sto~
 ADD_STORE_ITEM "MGVROBE1" #10 #0 #0 ~IDENTIFIED~ #6
 COPY ~VolcanicArmoury/Items/MGVROBE1.itm~ ~override/MGVROBE1.itm~
-SAY NAME1 ~Casual Robes~
-SAY NAME2 ~Casual Robes~
-SAY UNIDENTIFIED_DESC ~Casual Robes
-Casual robes are light and offer protection only slightly surpassing that of cloth, but offer greater freedom than any other armour.
-
-STATISTICS:
-
-Bonus +1 to Dexterity
-Armor Class: 9
-Weight: 4
-Usable By:
- Mage
- Sorcerer
- Bard
- Monk~
-SAY DESC ~Casual Robes
-Casual robes are light and offer protection only slightly surpassing that of cloth, but offer greater freedom than any other armour.
-
-STATISTICS:
-
-Bonus +1 to Dexterity
-Armor Class: 9
-Weight: 4
-Usable By:
- Mage
- Sorcerer
- Bard
- Monk~
+SAY NAME1 @9
+SAY NAME2 @9
+SAY UNIDENTIFIED_DESC @10
+SAY DESC @10
  
 COPY_EXISTING ~temhelm.sto~ ~override/temhelm.sto~
 ADD_STORE_ITEM "MGVSHLD1" #10 #0 #0 ~IDENTIFIED~ #1
 COPY ~VolcanicArmoury/Items/MGVSHLD1.itm~ ~override/MGVSHLD1.itm~
-SAY NAME1 ~Featherweight Shield~
-SAY NAME2 ~Featherweight Shield~
-SAY UNIDENTIFIED_DESC ~Medium Shield +2, Featherweight
-This shield radiates an aura of air elemental magic, making it light as a feather and thus easy to use, even for ones who normally lack the physical strength to use medium shields.
-
-STATISTICS:
-
-Armor Class Bonus: 3
-Weight: 1
-Requires: 8 Strength
-Not Usable By:
- Bard
- Druid
- Mage
- Thief
- Monk~
-SAY DESC ~Medium Shield +2, Featherweight
-This shield radiates an aura of air elemental magic, making it light as a feather and thus easy to use, even for ones who normally lack the physical strength to use medium shields.
-
-STATISTICS:
-
-Armor Class Bonus: 3
-Weight: 1
-Requires: 8 Strength
-Not Usable By:
- Bard
- Druid
- Mage
- Thief
- Monk~
+SAY NAME1 @11
+SAY NAME2 @11
+SAY UNIDENTIFIED_DESC @12
+SAY DESC @12
 
 COPY_EXISTING ~temlath.sto~ ~override/temlath.sto~
 ADD_STORE_ITEM "MGVSHLD2" #10 #0 #0 ~IDENTIFIED~ #1
 COPY ~VolcanicArmoury/Items/MGVSHLD2.itm~ ~override/MGVSHLD2.itm~
-SAY NAME1 ~Shield of Fortitude~
-SAY NAME2 ~Shield of Fortitude~
-SAY UNIDENTIFIED_DESC ~Small Shield +2, Shield of Fortitude
-This is a relatively simple shield that holds powerful enchantments that make the wearer more hardy and less susceptible to poison and disease.
-
-STATISTICS:
-
-Bonus +1 to Constitution
-Armor Class Bonus: 3
-Weight: 3
-Requires: 4 Strength
-Not Usable By:
- Bard
- Druid
- Mage
- Thief
- Monk~
-SAY DESC ~Small Shield +2, Shield of Fortitude
-This is a relatively simple shield that holds powerful enchantments that make the wearer more hardy and less susceptible to poison and disease.
-
-STATISTICS:
-
-Bonus +1 to Constitution
-Armor Class Bonus: 3
-Weight: 3
-Requires: 4 Strength
-Not Usable By:
- Bard
- Druid
- Mage
- Thief
- Monk~
+SAY NAME1 @13
+SAY NAME2 @13
+SAY UNIDENTIFIED_DESC @14
+SAY DESC @14
 
 COPY_EXISTING ~TRGENI01.sto~ ~override/TRGENI01.sto~
 ADD_STORE_ITEM "MGVMACE1" #10 #0 #0 ~IDENTIFIED~ #1
 COPY ~VolcanicArmoury/Items/MGVMACE1.itm~ ~override/MGVMACE1.itm~
-SAY NAME1 ~Hivemurderer +3~
-SAY NAME2 ~Hivemurderer +3~
-SAY UNIDENTIFIED_DESC ~Mace +3, Hivemurderer
-"Hivemurderer" got its name from the man who used it to slay a particularly nasty hive of Beholder-kin, after having forged this weapon with his own bare hands. A champion of the surrounding towns, Hivemurderer wasn't able to enjoy it for very long; he was shot in the back with a poisoned arrow. Likely the mace was stolen after.
-
-STATISTICS:
-
-Damage:  1D6+3
-Damage type:  crushing
-Special: 30% chance of slaying if the target is a beholder
-Weight: 6
-Speed Factor: 4
-Proficiency Type: Mace
-Type:  1-handed
-Requires: 12 Strength
-Not Usable By:
- Druid
- Mage
- Thief
- Monk~
-SAY DESC ~Mace +3, Hivemurderer
-"Hivemurderer" got its name from the man who used it to slay a particularly nasty hive of Beholder-kin, after having forged this weapon with his own bare hands. A champion of the surrounding towns, Hivemurderer wasn't able to enjoy it for very long; he was shot in the back with a poisoned arrow. Likely the mace was stolen after.
-
-STATISTICS:
-
-Damage:  1D6+3
-Damage type:  crushing
-Special: 30% chance of slaying if the target is a beholder
-Weight: 6
-Speed Factor: 4
-Proficiency Type: Mace
-Type:  1-handed
-Requires: 12 Strength
-Not Usable By:
- Druid
- Mage
- Thief
- Monk~
+SAY NAME1 @15
+SAY NAME2 @15
+SAY UNIDENTIFIED_DESC @16
+SAY DESC @16
  
 COPY_EXISTING ~UDDROW22.sto~ ~override/UDDROW22.sto~
 ADD_STORE_ITEM "MGVHELM2" #10 #0 #0 ~IDENTIFIED~ #1
 COPY ~VolcanicArmoury/Items/MGVHELM2.itm~ ~override/MGVHELM2.itm~
-SAY NAME1 ~Brainguard Helmet~
-SAY NAME2 ~Brainguard Helmet~
-SAY UNIDENTIFIED_DESC ~Brainguard Helmet
-Typically used by adventurers travelling into the Underdark, this helmet protects against changes in intelligence caused by mind flayers and other effects.
- 
-Armor Class Bonus:  None
-Special:  Protects Against Critical Hits
-          Immunity to intelligence stat change
-Weight: 1
-Not Usable By:
- Mage
- Bard
- Thief
- Monk
- Kensai~
-SAY DESC ~Brainguard Helmet
-Typically used by adventurers travelling into the Underdark, this helmet protects against changes in intelligence caused by mind flayers and other effects.
- 
-Armor Class Bonus:  None
-Special:  Protects Against Critical Hits
-          Immunity to intelligence stat change
-Weight: 1
-Not Usable By:
- Mage
- Bard
- Thief
- Monk
- Kensai~
+SAY NAME1 @17
+SAY NAME2 @17
+SAY UNIDENTIFIED_DESC @18
+SAY DESC @18
 
 COPY_EXISTING ~FFBART.sto~ ~override/FFBART.sto~
 ADD_STORE_ITEM "MGXBOW1" #10 #0 #0 ~IDENTIFIED~ #1
 COPY ~VolcanicArmoury/Items/MGXBOW1.itm~ ~override/MGXBOW1.itm~
-SAY NAME1 ~Grand Cross Conclusion +3~
-SAY NAME2 ~Grand Cross Conclusion +3~
-SAY UNIDENTIFIED_DESC ~Crossbowgun +3, Grand Cross Conclusion
-A variation of the crossbow, the crossbowgun is designed for rapid fire. This particular model is quite infamous and hard to find, as only a few were ever made.
-
-STATISTICS:
-
-Damage:  +2 (missile)
-Weight: 23
-Speed Factor: 10
-Proficiency Type: Crossbow
-Type:  2-handed
-Requires: 17 Strength
-Not Usable By:
- Druid
- Cleric
- Mage
- Thief
- Monk
- Kensai
- Cavalier~
-SAY DESC ~Crossbowgun +3, Grand Cross Conclusion
-A variation of the crossbow, the crossbowgun is designed for rapid fire. This particular model is quite infamous and hard to find, as only a few were ever made.
-
-STATISTICS:
-
-Damage:  +2 (missile)
-Weight: 23
-Speed Factor: 10
-Proficiency Type: Crossbow
-Type:  2-handed
-Requires: 17 Strength
-Not Usable By:
- Druid
- Cleric
- Mage
- Thief
- Monk
- Kensai
- Cavalier~
+SAY NAME1 @19
+SAY NAME2 @19
+SAY UNIDENTIFIED_DESC @20
+SAY DESC @20
