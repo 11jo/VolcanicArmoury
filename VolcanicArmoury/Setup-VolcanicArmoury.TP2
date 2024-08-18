@@ -3,6 +3,8 @@ AUTHOR ~st.aionmodding@yahoo.com~
 
 VERSION ~1.6~
 
+README ~VolcanicArmoury/VolcanicArmoury-Readme.txt~
+
 ALWAYS
 
 ACTION_IF GAME_IS ~bg2ee eet~ BEGIN
