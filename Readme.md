@@ -61,9 +61,11 @@ Version 1.5:
 Version 1.6:  
 - Updated to WeiDU version 249
 - French translation by Le Marquis
-- Update and EE conversion by JohnBob and Le Marquis
+- Update and EE conversion
 - Implement missing item Ioun Stone of Alertness
 - Autotra
 - InfinityAutoPackager
 - Metadata and Labels
 - Correction for MGXBOW1.ITM
+- UDDROW22.sto don't sell anything by defauft, this unlock his purchase store
+- FFBART.sto don't sell anything by defauft, this unlock his purchase store
